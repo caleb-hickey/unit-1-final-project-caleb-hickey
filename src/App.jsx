@@ -1,13 +1,18 @@
 import { useState } from 'react'
-import './App.css'
+import HomePage from './components/pages/HomePage.jsx'
+import OwnedBooks from './components/pages/OwnedBooks.jsx'
+import SearchPage from './components/pages/SearchPage.jsx'
+import WishList from './components/pages/WishList.jsx'
+import NavBar from './components/layout/NavBar.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+        <div>
+          <NavBar />
+        </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
