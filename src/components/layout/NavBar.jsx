@@ -3,9 +3,11 @@ import HomePage from '../pages/HomePage.jsx'
 import OwnedBooks from '../pages/OwnedBooks.jsx'
 import SearchPage from '../pages/SearchPage.jsx'
 import WishList from '../pages/WishList.jsx'
+import BookList from '../../assets/bookList.js'
+import BookCard from '../../assets/BookCard.jsx'
 
 function NavBar() {
-    const [currentPage, setCurrentPage] = useState("HomePage");
+    const [currentPage, setCurrentPage] = useState("OwnedBooks"); //setting this to OwnedBooks for now as the default, change back to HomePage later
     return (
         <div>
             <nav>

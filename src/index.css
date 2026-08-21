@@ -2,3 +2,25 @@ body {
   background: #36454F;
   color: white;
 }
+
+.BookCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px white solid;
+  width: 300px;
+}
+
+.BookCoverImage {
+  height: 150px;
+  margin: 10px;
+  grid-row: span 2; 
+  grid-column: 1;
+}
+
+.BookCardAuthor{
+   grid-column: 2; 
+}
+
+.BookCardAuthor{
+   grid-column: 2; 
+}

@@ -1,12 +1,21 @@
+import BookList from '../../assets/bookList.js'
+import BookCard from '../../assets/BookCard.jsx'
+
 function OwnedBooks () {
     return (
         <div>
-            <h1>Owned Books</h1>
+            {BookList.map((book) => (
+                <BookCard 
+                    coverUrl={book.coverUrl}
+                    title={book.title}
+                    author={book.author}
+                />
+            ))}
         </div>
     );
 }
 
-export default OwnedBooks
+export default OwnedBooks;
 
 //code from the practice-react-app project will be helpful in loading cards onto this page
 
