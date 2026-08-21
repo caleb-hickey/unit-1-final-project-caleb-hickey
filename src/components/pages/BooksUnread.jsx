@@ -1,11 +1,11 @@
 import BookList from '../../assets/bookList.js'
 import BookCard from '../../assets/BookCard.jsx'
 
-function WishList () {
-    const booksOnWishList = BookList.filter((book) => book.wishlist === true)
+function BooksUnread () {
+    const booksReadFalse = BookList.filter((book) => book.read === false && book.owned === true)
     return (
         <div>
-            {booksOnWishList.map((book) => (
+            {booksReadFalse.map((book) => (
                 <BookCard 
                     coverUrl={book.coverUrl}
                     title={book.title}
@@ -16,6 +16,4 @@ function WishList () {
     );
 }
 
-export default WishList
-
-//code from the practice-react-app project will be helpful in loading cards onto this page
+export default BooksUnread;

@@ -2,9 +2,10 @@ import BookList from '../../assets/bookList.js'
 import BookCard from '../../assets/BookCard.jsx'
 
 function OwnedBooks () {
+    const booksOwned = BookList.filter((book) => book.owned === true)
     return (
         <div>
-            {BookList.map((book) => (
+            {booksOwned.map((book) => (
                 <BookCard 
                     coverUrl={book.coverUrl}
                     title={book.title}
