@@ -5,11 +5,14 @@ function OwnedBooks () {
     const booksOwned = BookList.filter((book) => book.owned === true)
     return (
         <div>
+            <h1>Owned Books</h1>
             {booksOwned.map((book) => (
                 <BookCard 
                     coverUrl={book.coverUrl}
                     title={book.title}
                     author={book.author}
+                    genre={book.genre}
+                    pageLength={book.pageLength}
                 />
             ))}
         </div>

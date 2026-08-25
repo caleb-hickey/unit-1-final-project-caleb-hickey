@@ -7,7 +7,7 @@ const BookList = [
     "coverUrl": "https://covers.openlibrary.org/b/id/14624653-L.jpg",
     "amazonLink": "https://www.amazon.com/dp/0345339681",
     "owned": true,
-    "read": false,
+    "read": true,
     "wishlist": false,
     "id": "7357b424-f829-4b54-ac4f-9f551965e1dc"
   },
@@ -20,7 +20,7 @@ const BookList = [
     "amazonLink": "https://www.amazon.com/dp/0451524934",
     "owned": false,
     "read": false,
-    "wishlist": true,
+    "wishlist": false,
     "id": "7fd8be6d-ba9f-4925-b2c5-bf032efd7944"
   },
   {
@@ -66,9 +66,9 @@ const BookList = [
     "pageLength": 896,
     "coverUrl": "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg",
     "amazonLink": "https://www.amazon.com/dp/0441172717",
-    "owned": true,
+    "owned": false,
     "read": false,
-    "wishlist": false,
+    "wishlist": true,
     "id": "1de54242-c42b-4ab2-a739-75bdc804c14b"
   },
   {
@@ -90,7 +90,7 @@ const BookList = [
     "pageLength": 208,
     "coverUrl": "https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg",
     "amazonLink": "https://www.amazon.com/dp/0062315005",
-    "owned": true,
+    "owned": false,
     "read": false,
     "wishlist": false,
     "id": "e8361ad9-7c5b-4331-b76c-cf2c4a921b0a"
@@ -116,7 +116,7 @@ const BookList = [
     "amazonLink": "https://www.amazon.com/dp/0061120081",
     "owned": false,
     "read": false,
-    "wishlist": true,
+    "wishlist": false,
     "id": "715de066-dd0f-4872-ac14-0924c3916070"
   },
   {
@@ -174,9 +174,9 @@ const BookList = [
     "pageLength": 656,
     "coverUrl": "https://covers.openlibrary.org/b/isbn/9780684801377-L.jpg",
     "amazonLink": "https://www.amazon.com/dp/068480137X",
-    "owned": true,
-    "read": true,
-    "wishlist": false,
+    "owned": false,
+    "read": false,
+    "wishlist": true,
     "id": "8fe860e7-867f-4248-b2a4-8fa37d121a37"
   },
   {
