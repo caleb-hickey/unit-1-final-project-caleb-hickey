@@ -7,7 +7,7 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   border: 1px white solid;
-  width: 300px;
+  width: 500px;
 }
 
 .BookCoverImage {
@@ -15,8 +15,8 @@ body {
   margin: 10px;
   grid-row: span 2; 
   grid-column: 1;
-}
-
+} 
+ 
 .BookCardAuthor{
    grid-column: 1; 
 }
@@ -24,3 +24,8 @@ body {
 .BookCardAuthor{
    grid-column: 2; 
 }
+
+
+
+
+
