@@ -1,8 +1,7 @@
-import BookList from '../../assets/bookList.js'
 import BookCard from '../../assets/BookCard.jsx'
 
-function OwnedBooks () {
-    const booksOwned = BookList.filter((book) => book.owned === true)
+function OwnedBooks ({ books }) {
+    const booksOwned = books.filter((book) => book.owned === true)
     return (
         <div>
             <h1>Owned Books</h1>
