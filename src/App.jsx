@@ -8,10 +8,11 @@ import BookList from './assets/bookList.js'
 import BookCard from './assets/BookCard.jsx'
 
 function App() {
+  const [books, setBooks] = useState(BookList);
   return (
     <>
         <div>
-          <NavBar />
+          <NavBar books={books}/>
         </div>
     </>
   );

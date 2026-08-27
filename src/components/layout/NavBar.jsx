@@ -5,11 +5,9 @@ import BooksRead from '../pages/BooksRead.jsx'
 import BooksUnread from '../pages/BooksUnread.jsx'
 import SearchPage from '../pages/SearchPage.jsx'
 import WishList from '../pages/WishList.jsx'
-import BookList from '../../assets/bookList.js'
-import BookCard from '../../assets/BookCard.jsx'
 
-function NavBar() {
-    const [currentPage, setCurrentPage] = useState("HomePage"); //setting this to OwnedBooks for now as the default, change back to HomePage later
+function NavBar({ books }) {
+    const [currentPage, setCurrentPage] = useState("HomePage");
     return (
         <div>
             <nav>
@@ -21,10 +19,10 @@ function NavBar() {
                 <button onClick={() => setCurrentPage('Search Page')}>Search Page</button>
             </nav>
             {currentPage === 'HomePage' && <HomePage />}
-            {currentPage === 'OwnedBooks' && <OwnedBooks />}
-            {currentPage === 'BooksRead' && <BooksRead />}
-            {currentPage === 'BooksUnread' && <BooksUnread />}
-            {currentPage === 'WishList' && <WishList />}
+            {currentPage === 'OwnedBooks' && <OwnedBooks books={books}/>}
+            {currentPage === 'BooksRead' && <BooksRead books={books}/>}
+            {currentPage === 'BooksUnread' && <BooksUnread books={books}/>}
+            {currentPage === 'WishList' && <WishList books={books}/>}
             {currentPage === 'Search Page' && <SearchPage />}
         </div>
     )

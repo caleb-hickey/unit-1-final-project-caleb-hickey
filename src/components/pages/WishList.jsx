@@ -1,8 +1,8 @@
-import BookList from '../../assets/bookList.js'
 import BookCard from '../../assets/BookCard.jsx'
 
-function WishList () {
-    const booksOnWishList = BookList.filter((book) => book.wishlist === true)
+
+function WishList ({ books }) {
+    const booksOnWishList = books.filter((book) => book.wishlist === true)
     return (
         <div>
             {booksOnWishList.map((book) => (

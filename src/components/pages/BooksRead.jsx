@@ -1,8 +1,8 @@
-import BookList from '../../assets/bookList.js'
 import BookCard from '../../assets/BookCard.jsx'
 
-function BooksRead () {
-    const booksReadTrue = BookList.filter((book) => book.read === true)
+
+function BooksRead ({ books }) {
+    const booksReadTrue = books.filter((book) => book.read === true)
     return (
         <div>
             <h1>Books Read</h1>
