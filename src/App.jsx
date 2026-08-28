@@ -1,18 +1,20 @@
 import { useState } from 'react'
-import HomePage from './components/pages/HomePage.jsx'
-import OwnedBooks from './components/pages/OwnedBooks.jsx'
-import SearchPage from './components/pages/SearchPage.jsx'
-import WishList from './components/pages/WishList.jsx'
 import NavBar from './components/layout/NavBar.jsx'
 import BookList from './assets/bookList.js'
-import BookCard from './assets/BookCard.jsx'
 
 function App() {
   const [books, setBooks] = useState(BookList);
+  const toggleOwned = (id, owned) => {
+    setOwned((current)=>
+      current.map((book) =>
+        book.id === id ? { ...book, owned: !book[owned]}
+    : book
+    ))
+  }
   return (
     <>
         <div>
-          <NavBar books={books}/>
+          <NavBar books={books} toggleOwned={toggleOwned}/>
         </div>
     </>
   );

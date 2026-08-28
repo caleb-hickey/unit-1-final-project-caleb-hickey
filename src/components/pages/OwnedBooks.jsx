@@ -1,6 +1,6 @@
 import BookCard from '../../assets/BookCard.jsx'
 
-function OwnedBooks ({ books }) {
+function OwnedBooks ({ books, toggleOwned }) {
     const booksOwned = books.filter((book) => book.owned === true)
     return (
         <div>
@@ -12,6 +12,9 @@ function OwnedBooks ({ books }) {
                     author={book.author}
                     genre={book.genre}
                     pageLength={book.pageLength}
+                    owned={book.owned}
+                    id={book.id}
+                    toggleOwned={toggleOwned}
                 />
             ))}
         </div>

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-function BookCard ({ title, author, coverUrl, genre, pageLength }) {
+function BookCard ({ title, author, coverUrl, genre, pageLength, owned, id, toggleOwned }) {
     const [openDetails, setOpenDetails] = useState(false);
+    
     return (
         <div className= "BookCard">
             <img src={coverUrl} className= "BookCoverImage"></img>
@@ -13,7 +14,10 @@ function BookCard ({ title, author, coverUrl, genre, pageLength }) {
                     <div className="bookDetails">
                         <p className= "BookDetailsGenre"><b>Genre:</b> {genre}</p>
                         <p className= "BookDetailsPageLength"><b>Page Count:</b> {pageLength} pages</p>
-                            <button className="ownButton">I own this</button>
+                            <button 
+                                className="ownButton" 
+                                onClick={() => toggleOwned(id, "owned")}
+                                >{owned ? "I don't own this" : "I own this"}</button>
                             <button className="readButton">I've read this</button>
                             <button className="wishlistButton">I want this</button>
                     </div>
