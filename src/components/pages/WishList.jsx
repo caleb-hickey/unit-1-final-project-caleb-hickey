@@ -10,6 +10,8 @@ function WishList ({ books }) {
                     coverUrl={book.coverUrl}
                     title={book.title}
                     author={book.author}
+                    genre={book.genre}
+                    pageLength={book.pageLength}
                 />
             ))}
         </div>
