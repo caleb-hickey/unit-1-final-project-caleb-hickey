@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #36454F;
   color: white;
@@ -23,6 +29,20 @@ body {
 
 .BookCardAuthor{
    grid-column: 2; 
+}
+
+li {
+
+  color: white;
+  text-decoration: none;  /* Removes underline */
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block;         /* Makes the entire padding area clickable */
+  transition: 0.3s
+}
+
+li a:visited {
+  color: inherit;
 }
 
 .header {
@@ -62,9 +82,26 @@ body {
   align-items: top;
 }
 
-.logo {
+.headerLogo {
   height: 75px;
   width: fixed;
   display: inline-block;
   align-items: right;
+}
+
+.homepageBanner{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
+  justify-content: center;
+  background: rgb(91, 152, 251);
+}
+
+.homepageLogo {
+  height: 150px;
+  width: fixed;
+  display: inline-block;
+  align-items: center;
 }
