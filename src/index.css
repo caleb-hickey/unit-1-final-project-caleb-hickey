@@ -36,6 +36,27 @@ body {
 
 }
 
+.footer {
+  display: grid;
+  height: 50px; 
+  background: red;
+  place-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.footerContent {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 80;
+}
+
 .pageTitle {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   align-items: top;
@@ -47,5 +68,3 @@ body {
   display: inline-block;
   align-items: right;
 }
-
-

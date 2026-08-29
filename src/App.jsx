@@ -2,6 +2,7 @@ import { useState } from 'react'
 import NavBar from './components/layout/NavBar.jsx'
 import BookList from './assets/bookList.js'
 import Header from './components/layout/Header.jsx'
+import Footer from './components/layout/Footer.jsx'
 
 function App() {
   const [books, setBooks] = useState(BookList);
@@ -17,6 +18,7 @@ function App() {
         <div>
           <Header />
           <NavBar books={books} toggleOwned={toggleOwned}/>
+          <Footer />
         </div>
     </>
   );
