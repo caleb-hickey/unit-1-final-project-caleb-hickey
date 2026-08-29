@@ -5,7 +5,7 @@ function Header() {
     return(
         <div className="header">
             <h1 className="pageTitle">myShelf</h1>
-            <img className="logo" src={logo}></img>
+            <img className="headerLogo" src={logo}></img>
         </div>
     )
 }
