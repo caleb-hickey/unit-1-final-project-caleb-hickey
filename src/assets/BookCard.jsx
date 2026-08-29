@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function BookCard ({ title, author, coverUrl, genre, pageLength, owned, id, toggleOwned }) {
+function BookCard ({ title, author, coverUrl, genre, pageLength, owned, read, wishlist, id, toggleOwned, toggleRead, toggleWishList }) {
     const [openDetails, setOpenDetails] = useState(false);
     
     return (
@@ -18,8 +18,14 @@ function BookCard ({ title, author, coverUrl, genre, pageLength, owned, id, togg
                                 className="ownButton" 
                                 onClick={() => toggleOwned(id, "owned")}
                                 >{owned ? "I don't own this" : "I own this"}</button>
-                            <button className="readButton">I've read this</button>
-                            <button className="wishlistButton">I want this</button>
+                            <button 
+                                className="readButton"
+                                onClick={() => toggleRead(id, "read")}
+                                >{read ? "I haven't read this" : "I have read this"}</button>
+                            <button 
+                                className="wishlistButton"
+                                onClick={() => toggleWishList(id, "wishlist")}
+                                >{wishlist ? "Take off my Wish List" : "On my Wish List"}</button>
                     </div>
                 )}
         </div>

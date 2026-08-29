@@ -10,7 +10,19 @@ import Footer from './components/layout/Footer.jsx'
 
 function App() {
   const [books, setBooks] = useState(BookList);
-  return (
+  function toggleOwned(id) {
+      setBooks((currentBooks) =>
+        currentBooks.map((book) => book.id === id ? { ...book, owned: !book.owned} : book )
+    )}
+  function toggleRead(id) {
+    setBooks((currentBooks) =>
+    currentBooks.map((book) => book.id === id ? { ...book, read: !book.read} : book)
+  )}
+  function toggleWishList(id){
+    setBooks((currentBooks) =>
+      currentBooks.map((book) => book.id === id ? {...book, wishlist: !book.wishlist} : book))
+  }
+return (
     <>
         <div>
           <Header />
@@ -24,7 +36,12 @@ function App() {
           <Routes>
             <Route path="/home" element={<HomePage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/library" element={<Library books={books} />} />
+            <Route path="/library" element={<Library 
+              books={books} 
+              toggleOwned={toggleOwned}
+              toggleRead={toggleRead}
+              toggleWishList={toggleWishList}
+            />} />
           </Routes>
           <Footer />
         </div>
