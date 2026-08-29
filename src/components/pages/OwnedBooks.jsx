@@ -1,12 +1,13 @@
 import BookCard from '../../assets/BookCard.jsx'
 
-function OwnedBooks ({ books, toggleOwned }) {
+function OwnedBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
     const booksOwned = books.filter((book) => book.owned === true)
     return (
         <div>
             <h1>Owned Books</h1>
             {booksOwned.map((book) => (
                 <BookCard 
+                    key={book.id}
                     coverUrl={book.coverUrl}
                     title={book.title}
                     author={book.author}
@@ -15,6 +16,8 @@ function OwnedBooks ({ books, toggleOwned }) {
                     owned={book.owned}
                     id={book.id}
                     toggleOwned={toggleOwned}
+                    toggleRead={toggleRead}
+                    toggleWishList={toggleWishList}
                 />
             ))}
         </div>

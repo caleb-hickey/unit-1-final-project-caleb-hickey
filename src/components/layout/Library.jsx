@@ -5,7 +5,7 @@ import ToBeRead from '../pages/ToBeRead.jsx'
 import BrowseBooks from '../pages/BrowseBooks.jsx'
 import WishList from '../pages/WishList.jsx'
 
-function Library({ books, toggleOwned }) {
+function Library({ books, toggleOwned, toggleRead, toggleWishList }) {
     const [currentPage, setCurrentPage] = useState("HomePage");
     return (
         <div>
@@ -16,10 +16,26 @@ function Library({ books, toggleOwned }) {
                 <button onClick={() => setCurrentPage('WishList')}>Wish List</button>
                 <button onClick={() => setCurrentPage('BrowseBooks')}>BrowseBooks</button>
             </nav>
-            {currentPage === 'OwnedBooks' && <OwnedBooks books={books} toggleOwned={toggleOwned}/>}
-            {currentPage === 'BooksRead' && <BooksRead books={books} toggleOwned={toggleOwned}/>}
-            {currentPage === 'ToBeRead' && <ToBeRead books={books} toggleOwned={toggleOwned}/>}
-            {currentPage === 'WishList' && <WishList books={books} toggleOwned={toggleOwned}/>}
+            {currentPage === 'OwnedBooks' && <OwnedBooks  
+                books={books} 
+                toggleOwned={toggleOwned}
+                toggleRead={toggleRead}
+                toggleWishList={toggleWishList}/>}
+            {currentPage === 'BooksRead' && <BooksRead  
+                books={books} 
+                toggleOwned={toggleOwned}
+                toggleRead={toggleRead}
+                toggleWishList={toggleWishList}/>}
+            {currentPage === 'ToBeRead' && <ToBeRead  
+                books={books} 
+                toggleOwned={toggleOwned}
+                toggleRead={toggleRead}
+                toggleWishList={toggleWishList}/>}
+            {currentPage === 'WishList' && <WishList  
+                books={books} 
+                toggleOwned={toggleOwned}
+                toggleRead={toggleRead}
+                toggleWishList={toggleWishList}/>}
             {currentPage === 'BrowseBooks' && <BrowseBooks />}
         </div>
     )
