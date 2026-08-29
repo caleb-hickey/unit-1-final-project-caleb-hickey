@@ -1,11 +1,11 @@
 import BookCard from '../../assets/BookCard.jsx'
 
 
-function BooksUnread ({ books }) {
+function ToBeRead ({ books }) {
     const booksReadFalse = books.filter((book) => book.read === false && book.owned === true)
     return (
         <div>
-            <h1>Books Unread</h1>
+            <h1>To Be Read</h1>
             {booksReadFalse.map((book) => (
                 <BookCard 
                     coverUrl={book.coverUrl}
@@ -19,4 +19,4 @@ function BooksUnread ({ books }) {
     );
 }
 
-export default BooksUnread;
+export default ToBeRead;
