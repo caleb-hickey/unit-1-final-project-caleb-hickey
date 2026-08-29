@@ -1,12 +1,12 @@
-function SearchPage() {
+function BrowseBooks() {
     return (
         <div>
-            <h1>Search Page</h1>
+            <h1>Browse Books</h1>
         </div>
     );
 }
 
-export default SearchPage
+export default BrowseBooks
 
 //code from the practice-react-app project will be helpful in loading cards onto this page
 
