@@ -12,7 +12,7 @@ function App() {
   const [books, setBooks] = useState(BookList);
   function toggleOwned(id) {
       setBooks((currentBooks) =>
-        currentBooks.map((book) => book.id === id ? { ...book, owned: !book.owned} : book )
+        currentBooks.map((book) => book.id === id ? { ...book, owned: !book.owned, wishlist: false} : book )
     )}
   function toggleRead(id) {
     setBooks((currentBooks) =>
@@ -20,7 +20,7 @@ function App() {
   )}
   function toggleWishList(id){
     setBooks((currentBooks) =>
-      currentBooks.map((book) => book.id === id ? {...book, wishlist: !book.wishlist} : book))
+      currentBooks.map((book) => book.id === id ? {...book, wishlist: !book.wishlist, owned: false} : book))
   }
 return (
     <>
@@ -50,16 +50,3 @@ return (
 }
 
 export default App;
-
-
-
-
-// function App() {
-//   const [books, setBooks] = useState(BookList);
-//   const toggleOwned = (id, owned) => {
-//     setOwned((current)=>
-//       current.map((book) =>
-//         book.id === id ? { ...book, owned: !book[owned]}
-//     : book
-//     ))
-//   }
