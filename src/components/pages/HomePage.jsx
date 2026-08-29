@@ -5,8 +5,8 @@ function HomePage() {
     return(
         <div className="homepageBanner">
             <img className="homepageLogo" src={logo}></img>
-            <h1>Homepage</h1>
-            <h3>Your digital book collection manager</h3>
+            <h1>Welcome to myShelf!</h1>
+            <h3>Your book collection manager, digitized</h3>
         </div>
     );
 }
