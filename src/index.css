@@ -25,7 +25,27 @@ body {
    grid-column: 2; 
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
+  justify-content: flex-end;
+  background: red;
 
+}
 
+.pageTitle {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  align-items: top;
+}
+
+.logo {
+  height: 75px;
+  width: fixed;
+  display: inline-block;
+  align-items: right;
+}
 
 
