@@ -17,14 +17,14 @@ function App() {
           <nav>
             <ul>
               <li><Link to="/home">Home</Link></li>
-              <li><Link to="/library">Library</Link></li>
               <li><Link to="/about">About</Link></li>
+              <li><Link to="/library">Library</Link></li>
             </ul>
           </nav>
           <Routes>
             <Route path="/home" element={<HomePage />} />
-            <Route path="/library" element={<Library books={books} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/library" element={<Library books={books} />} />
           </Routes>
           <Footer />
         </div>
