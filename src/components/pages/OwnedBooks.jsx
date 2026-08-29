@@ -13,8 +13,10 @@ function OwnedBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
                     author={book.author}
                     genre={book.genre}
                     pageLength={book.pageLength}
-                    owned={book.owned}
                     id={book.id}
+                    read={book.read}
+                    owned={book.owned}
+                    wishlist={book.wishlist}
                     toggleOwned={toggleOwned}
                     toggleRead={toggleRead}
                     toggleWishList={toggleWishList}

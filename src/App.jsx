@@ -20,7 +20,7 @@ function App() {
   )}
   function toggleWishList(id){
     setBooks((currentBooks) =>
-      currentBooks.map)
+      currentBooks.map((book) => book.id === id ? {...book, wishlist: !book.wishlist} : book))
   }
 return (
     <>

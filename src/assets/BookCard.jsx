@@ -25,7 +25,7 @@ function BookCard ({ title, author, coverUrl, genre, pageLength, owned, read, wi
                             <button 
                                 className="wishlistButton"
                                 onClick={() => toggleWishList(id, "wishlist")}
-                                >{wishlist ? "I want this" : "I got this"}</button>
+                                >{wishlist ? "Take off my Wish List" : "On my Wish List"}</button>
                     </div>
                 )}
         </div>

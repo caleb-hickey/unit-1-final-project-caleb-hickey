@@ -7,13 +7,16 @@ function WishList ({ books, toggleOwned, toggleRead, toggleWishList }) {
         <div>
             {booksOnWishList.map((book) => (
                 <BookCard
-                    key={book.id} 
+                    key={book.id}
                     coverUrl={book.coverUrl}
                     title={book.title}
                     author={book.author}
                     genre={book.genre}
                     pageLength={book.pageLength}
                     id={book.id}
+                    read={book.read}
+                    owned={book.owned}
+                    wishlist={book.wishlist}
                     toggleOwned={toggleOwned}
                     toggleRead={toggleRead}
                     toggleWishList={toggleWishList}
