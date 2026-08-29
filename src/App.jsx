@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router';
 import BookList from './assets/bookList.js'
 import Header from './components/layout/Header.jsx'
 import HomePage from './components/pages/HomePage.jsx'
+import About from './components/pages/About.jsx'
 import Library from './components/layout/Library.jsx'
 import Footer from './components/layout/Footer.jsx'
 
@@ -17,11 +18,13 @@ function App() {
             <ul>
               <li><Link to="/home">Home</Link></li>
               <li><Link to="/library">Library</Link></li>
+              <li><Link to="/about">About</Link></li>
             </ul>
           </nav>
           <Routes>
             <Route path="/home" element={<HomePage />} />
             <Route path="/library" element={<Library books={books} />} />
+            <Route path="/about" element={<About />} />
           </Routes>
           <Footer />
         </div>
