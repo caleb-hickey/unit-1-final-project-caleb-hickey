@@ -161,24 +161,26 @@ li a:visited {
   height: 100px;
 }
 
+.bookCardContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .BookCard {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  border: 1px white solid;
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  width: 300px;
+  border-radius: 12px;
+  margin: 20px;
+
 }
 
 .BookCoverImage {
-  height: 150px;
+  object-fit: contain;
+  height: 300px;
+  width: auto;
   margin: 10px;
   grid-row: span 2;
   grid-column: 1;
-}
-
-.BookCardAuthor {
-  grid-column: 1;
-}
-
-.BookCardAuthor {
-  grid-column: 2;
 }

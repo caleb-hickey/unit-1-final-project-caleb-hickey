@@ -5,7 +5,8 @@ function BooksRead ({ books, toggleOwned, toggleRead, toggleWishList }) {
     const booksReadTrue = books.filter((book) => book.read === true)
     return (
         <div>
-            <h1>Books Read</h1>
+            <h1>Books I've Read</h1>
+            <section className="bookCardContainer">
             {booksReadTrue.map((book) => (
                 <BookCard 
                     key={book.id}
@@ -23,6 +24,7 @@ function BooksRead ({ books, toggleOwned, toggleRead, toggleWishList }) {
                     toggleWishList={toggleWishList}
                 />
             ))}
+            </section>
         </div>
     );
 }

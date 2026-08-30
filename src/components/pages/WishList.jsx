@@ -5,6 +5,8 @@ function WishList ({ books, toggleOwned, toggleRead, toggleWishList }) {
     const booksOnWishList = books.filter((book) => book.wishlist === true)
     return (
         <div>
+            <h1>My Wishlist</h1>
+            <section className="bookCardContainer">
             {booksOnWishList.map((book) => (
                 <BookCard
                     key={book.id}
@@ -22,6 +24,7 @@ function WishList ({ books, toggleOwned, toggleRead, toggleWishList }) {
                     toggleWishList={toggleWishList}
                 />
             ))}
+             </section>
         </div>
     );
 }

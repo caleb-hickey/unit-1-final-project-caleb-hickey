@@ -6,6 +6,7 @@ function ToBeRead ({ books, toggleOwned, toggleRead, toggleWishList }) {
     return (
         <div>
             <h1>To Be Read</h1>
+            <section className="bookCardContainer">
             {booksReadFalse.map((book) => (
                 <BookCard 
                     key={book.id}
@@ -23,6 +24,7 @@ function ToBeRead ({ books, toggleOwned, toggleRead, toggleWishList }) {
                     toggleWishList={toggleWishList}
                 />
             ))}
+             </section>
         </div>
     );
 }

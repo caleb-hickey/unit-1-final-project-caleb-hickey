@@ -5,6 +5,7 @@ function OwnedBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
     return (
         <div>
             <h1>Owned Books</h1>
+            <section className="bookCardContainer">
             {booksOwned.map((book) => (
                 <BookCard 
                     key={book.id}
@@ -22,6 +23,7 @@ function OwnedBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
                     toggleWishList={toggleWishList}
                 />
             ))}
+             </section>
         </div>
     );
 }
