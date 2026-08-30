@@ -5,6 +5,7 @@ import BookList from './assets/bookList.js'
 import Header from './components/layout/Header.jsx'
 import HomePage from './components/pages/HomePage.jsx'
 import About from './components/pages/About.jsx'
+import FeedbackForm from './components/pages/FeedbackForm.jsx'
 import Library from './components/layout/Library.jsx'
 import Footer from './components/layout/Footer.jsx'
 
@@ -31,6 +32,7 @@ return (
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/library">Library</Link></li>
+              <li><Link to="/feedback">Feedback</Link></li>
             </ul>
           </nav>
           <Routes>
@@ -42,6 +44,7 @@ return (
               toggleRead={toggleRead}
               toggleWishList={toggleWishList}
             />} />
+            <Route path="/feedback" element={<FeedbackForm />} />
           </Routes>
           <Footer />
         </div>
