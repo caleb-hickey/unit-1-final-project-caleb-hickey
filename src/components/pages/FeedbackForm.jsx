@@ -55,7 +55,7 @@ function FeedbackForm() {
         <br />
         <br></br>
         <label>
-          * Email:
+          * Email: 
           <input
             type="email"
             name="email"
@@ -67,8 +67,8 @@ function FeedbackForm() {
         <br />
         <br></br>
         <label id="feedbackField">
-          Feedback:
-          <textarea
+          Feedback: 
+          <textarea className="feedbackInput"
             name="feedback"
             placeholder="Leave blank and check below if you just want our newsletter!"
             value={formData.feedback}
@@ -77,7 +77,7 @@ function FeedbackForm() {
           </label>
           <br />
           <br></br>
-          <label id="newsletterSignUp"><input type="checkbox"></input>Sign me up for your newsletter!</label>
+          <label id="newsletterSignUp"><input type="checkbox"></input> Sign me up for your newsletter!</label>
           <br></br>
           <br></br>
           <button type="submit" id="submitButton">Submit</button>

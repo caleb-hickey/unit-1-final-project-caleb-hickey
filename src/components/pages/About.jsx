@@ -1,14 +1,14 @@
 function About() {
 
     return(
-        <div>
+        <div className="aboutPage">
             <main className="aboutPageOverview">
                 <h1 className="aboutPageTitle">About Using myShelf</h1>
                 <p className="aboutPageIntroParagraph"><b>myShelf</b> is a simple place to keep a digital version of your bookshelf. Add the books you own, the ones you have already read, and the ones you want, then open that library from anywhere instead of relying on memory or a pile of notes. Each title lives on a card with the details that matter—cover, author, genre, length—and you can mark whether you own it, have read it, or have it on your wishlist so the shelves stay accurate as your collection changes. </p>
                 <br></br>
             </main>
             <section className="howToUseBlock">
-                <h3>How to use myShelf</h3>
+                <h1>How to use myShelf</h1>
                 <p>When you click on the Library link above, you'll see your library, represented digitally. To find books, click on the <b>"Browse Books"</b> tab. You'll see the full collection of books we currently support!
                     <br></br>
                     <br></br>
