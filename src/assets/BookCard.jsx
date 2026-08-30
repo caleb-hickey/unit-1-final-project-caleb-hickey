@@ -5,7 +5,7 @@ function BookCard ({ title, author, coverUrl, genre, pageLength, owned, read, wi
     
     return (
         <div className= "BookCard">
-            <img src={coverUrl} className= "BookCoverImage"></img>
+            <img src={coverUrl} className= "BookCoverImage" alt="Book cover"></img>
             <p className= "BookCardTitle"><b>Title:</b> {title}</p>
             <p className= "BookCardAuthor"><b>Author:</b> {author}</p>
             <br></br>
