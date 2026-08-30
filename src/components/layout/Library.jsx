@@ -36,7 +36,11 @@ function Library({ books, toggleOwned, toggleRead, toggleWishList }) {
                 toggleOwned={toggleOwned}
                 toggleRead={toggleRead}
                 toggleWishList={toggleWishList}/>}
-            {currentPage === 'BrowseBooks' && <BrowseBooks />}
+            {currentPage === 'BrowseBooks' && <BrowseBooks  
+                books={books} 
+                toggleOwned={toggleOwned}
+                toggleRead={toggleRead}
+                toggleWishList={toggleWishList}/>}
         </div>
     )
 }
