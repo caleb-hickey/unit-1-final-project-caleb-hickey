@@ -103,6 +103,15 @@ li a:visited {
   white-space: nowrap;
 }
 
+button {
+  border-radius: 6px;
+  background: #d8d1c3;
+}
+
+button:hover{
+  background: #596e79;
+}
+
 .bookToggleButtons button, .detailsButton{
   margin: 10px;
   height: 40px;
@@ -180,10 +189,13 @@ li a:visited {
 }
 
 .bookCardContainer {
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .libraryCardHeader {
@@ -214,6 +226,16 @@ li a:visited {
   grid-column: 1;
 }
 
-/* .detailsButton{
-  vertical-align: bottom;
-} */
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .header{
+    justify-content: center;
+  }
+  .navBar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* @media screen and (max-width: px) {} */
