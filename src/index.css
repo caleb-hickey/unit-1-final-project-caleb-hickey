@@ -2,84 +2,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overscroll-behavior: none
 }
 
 body {
-  background: #36454F;
-  color: white;
-}
-
-.BookCard {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  border: 1px white solid;
-  width: 500px;
-}
-
-.BookCoverImage {
-  height: 150px;
-  margin: 10px;
-  grid-row: span 2; 
-  grid-column: 1;
-} 
- 
-.BookCardAuthor{
-   grid-column: 1; 
-}
-
-.BookCardAuthor{
-   grid-column: 2; 
-}
-
-li {
-
-  color: white;
-  text-decoration: none;  /* Removes underline */
-  font-size: 16px;
-  padding: 8px 12px;
-  display: block;         /* Makes the entire padding area clickable */
-  transition: 0.3s
-}
-
-li a:visited {
-  color: inherit;
+  background: #f0ece2;
+  color: #596e79;
+  padding: 150px 0px;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: auto;
-  justify-content: flex-end;
-  background: red;
-
-}
-
-.footer {
-  display: grid;
-  height: 50px; 
-  background: red;
-  place-items: center;
-  justify-content: center;
   position: fixed;
-  width: 100%;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-
-}
-
-.footerContent {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  height: 80px;
+  display: flex;
   align-items: center;
-  font-size: 10px;
-  font-weight: 80;
-}
-
-.pageTitle {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  align-items: top;
+  padding: 0 20px;
+  justify-content: flex-end;
+  background: #596e79;
+  color: #f0ece2;
 }
 
 .headerLogo {
@@ -89,14 +33,124 @@ li a:visited {
   align-items: right;
 }
 
-.homepageBanner{
+.pageTitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: top;
+}
+
+.navBar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #596e79;
+  z-index: 900;
+}
+
+.navBar ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #f0ece2;
+  list-style: none;
+}
+
+.navBar ul :hover {
+  background: #d8d1c3;
+}
+
+.navBar li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #596e79;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navBar li a:hover {
+  background: #d8d1c3;
+}
+
+li a {
+  color: #596e79;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+li a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.libraryNavBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.libraryNavButton{
+  margin: 10px;
+  height: 40px;
+  width: 125px;
+  font-size: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.bookToggleButtons button, .detailsButton{
+  margin: 10px;
+  height: 40px;
+  width: 175px;
+  font-size: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+#submitButton {
+  margin: 10px;
+  height: 40px;
+  width: 125px;
+  font-size: 15px;
+}
+
+.footer {
+  display: flex;
+  height: 50px;
+  background: #596e79;
+  place-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #f0ece2;
+}
+
+.footerContent {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 80;
+}
+
+.homepageBanner {
+  display: flex;
+  align-items: center;
+  display: fixed;
+  height: 250px;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   width: auto;
   justify-content: center;
-  background: rgb(91, 152, 251);
+  background: #c7b198;
 }
 
 .homepageLogo {
@@ -105,3 +159,61 @@ li a:visited {
   display: inline-block;
   align-items: center;
 }
+
+.aboutPage, .feedbackForm {
+  margin: 0px 50px;
+}
+
+.aboutPage h1, .feedbackTitle {
+  margin: 12px;
+  text-align: center;
+
+}
+
+#feedbackField textarea{
+  vertical-align: top;
+}
+
+.feedbackInput {
+  width: 400px;
+  height: 100px;
+}
+
+.bookCardContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.libraryCardHeader {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.BookCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  width: 300px;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 10px 30px;
+}
+
+.BookCard:hover{
+  background: #d8d1c3;
+}
+
+.BookCoverImage {
+  object-fit: contain;
+  height: 300px;
+  width: auto;
+  margin: 10px;
+  grid-row: span 2;
+  grid-column: 1;
+}
+
+/* .detailsButton{
+  vertical-align: bottom;
+} */

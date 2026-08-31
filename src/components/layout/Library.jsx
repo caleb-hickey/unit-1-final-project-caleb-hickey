@@ -9,12 +9,12 @@ function Library({ books, toggleOwned, toggleRead, toggleWishList }) {
     const [currentPage, setCurrentPage] = useState("BrowseBooks");
     return (
         <div>
-            <nav>
-                <button onClick={() => setCurrentPage('BrowseBooks')}>BrowseBooks</button>
-                <button onClick={() => setCurrentPage('OwnedBooks')}>Owned Books</button>
-                <button onClick={() => setCurrentPage('BooksRead')}>Books Read</button>
-                <button onClick={() => setCurrentPage('ToBeRead')}>To Be Read</button>
-                <button onClick={() => setCurrentPage('WishList')}>Wish List</button>
+            <nav className="libraryNavBar">
+                <button className="libraryNavButton" onClick={() => setCurrentPage('BrowseBooks')}>Browse Books</button>
+                <button className="libraryNavButton" onClick={() => setCurrentPage('OwnedBooks')}>Owned Books</button>
+                <button className="libraryNavButton" onClick={() => setCurrentPage('BooksRead')}>Books Read</button>
+                <button className="libraryNavButton" onClick={() => setCurrentPage('ToBeRead')}>To Be Read</button>
+                <button className="libraryNavButton" onClick={() => setCurrentPage('WishList')}>Wish List</button>
             </nav>
             {currentPage === 'BrowseBooks' && <BrowseBooks  
                 books={books} 

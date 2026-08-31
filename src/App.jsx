@@ -27,7 +27,7 @@ return (
     <>
         <div>
           <Header />
-          <nav>
+          <nav className="navBar">
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
