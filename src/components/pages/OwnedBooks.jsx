@@ -4,7 +4,7 @@ function OwnedBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
     const booksOwned = books.filter((book) => book.owned === true)
     return (
         <div>
-            <h1>Owned Books</h1>
+            <h1 className="libraryCardHeader">Books I Own</h1>
             <section className="bookCardContainer">
             {booksOwned.map((book) => (
                 <BookCard 

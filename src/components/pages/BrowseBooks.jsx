@@ -3,7 +3,7 @@ import BookCard from '../../assets/BookCard.jsx'
 function BrowseBooks ({ books, toggleOwned, toggleRead, toggleWishList }) {
     return (
         <div>
-            <h1>Browse Books</h1>
+            <h1 className="libraryCardHeader">Browse All Books</h1>
             <section className="bookCardContainer">
             {books.map((book) => (
                 <BookCard 

@@ -162,8 +162,15 @@ li a:visited {
 }
 
 .bookCardContainer {
+  padding: 20px;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+}
+
+.libraryCardHeader {
+  padding-top: 10px;
+  text-align: center;
 }
 
 .BookCard {
@@ -173,7 +180,11 @@ li a:visited {
   width: 300px;
   border-radius: 12px;
   margin: 20px;
+  padding: 10px 30px;
+}
 
+.BookCard:hover{
+  background: #d8d1c3;
 }
 
 .BookCoverImage {
@@ -183,4 +194,8 @@ li a:visited {
   margin: 10px;
   grid-row: span 2;
   grid-column: 1;
+}
+
+.detailsButton{
+  vertical-align: bottom;
 }
