@@ -103,6 +103,23 @@ li a:visited {
   white-space: nowrap;
 }
 
+button {
+  border-radius: 6px;
+  background: #d8d1c3;
+}
+
+button:hover{
+  background: #596e79;
+}
+
+.bookToggleButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .bookToggleButtons button, .detailsButton{
   margin: 10px;
   height: 40px;
@@ -180,10 +197,13 @@ li a:visited {
 }
 
 .bookCardContainer {
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .libraryCardHeader {
@@ -205,6 +225,10 @@ li a:visited {
   background: #d8d1c3;
 }
 
+.BookCard button{
+  align-self: center;
+}
+
 .BookCoverImage {
   object-fit: contain;
   height: 300px;
@@ -214,6 +238,42 @@ li a:visited {
   grid-column: 1;
 }
 
-/* .detailsButton{
-  vertical-align: bottom;
-} */
+/* Animation */
+
+button:hover{
+  animation: buttonBounce 0.5s ease-in-out;
+}
+
+@keyframes buttonBounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(.95);}
+  100% {transform: scale(1);}
+}
+
+.BookCard:hover{
+  animation: bookCardBounce 0.5s ease-in-out;
+}
+
+@keyframes bookCardBounce {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .header{
+    justify-content: center;
+  }
+  .navBar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .BookCard, .libraryNavBar, .topOfPage, .homepageLogo, .libraryCardHeader{
+    zoom: 0.75;
+  }
+}

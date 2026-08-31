@@ -26,6 +26,7 @@ function App() {
 return (
     <>
         <div>
+          <section className="topOfPage">
           <Header />
           <nav className="navBar">
             <ul>
@@ -35,6 +36,7 @@ return (
               <li><Link to="/feedback">Feedback</Link></li>
             </ul>
           </nav>
+          </section>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
