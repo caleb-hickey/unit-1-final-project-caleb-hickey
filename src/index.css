@@ -87,11 +87,29 @@ li a:visited {
   text-decoration: none;
 }
 
-.libraryNavButton {
+.libraryNavBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.libraryNavButton{
   margin: 10px;
   height: 40px;
   width: 125px;
   font-size: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.bookToggleButtons button, .detailsButton{
+  margin: 10px;
+  height: 40px;
+  width: 175px;
+  font-size: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 #submitButton {
@@ -196,6 +214,6 @@ li a:visited {
   grid-column: 1;
 }
 
-.detailsButton{
+/* .detailsButton{
   vertical-align: bottom;
-}
+} */
