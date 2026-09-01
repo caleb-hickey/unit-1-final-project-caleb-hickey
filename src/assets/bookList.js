@@ -1,3 +1,5 @@
+// This is the full list of books currently available in the app
+
 const BookList = [
   {
     "title": "1984",

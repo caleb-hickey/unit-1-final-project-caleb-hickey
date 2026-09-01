@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+// This card is the mvp of this project. It contains all the information for each book, only displays on the pages where it should be rendered based on bool values, and has buttons to change those statuses
+
 function BookCard ({ title, author, coverUrl, genre, pageLength, owned, read, wishlist, id, toggleOwned, toggleRead, toggleWishList }) {
     const [openDetails, setOpenDetails] = useState(false);
     
@@ -12,6 +14,7 @@ function BookCard ({ title, author, coverUrl, genre, pageLength, owned, read, wi
                     <div className="bookDetails">
                         <p className= "BookDetailsGenre"><b>Genre:</b> {genre}</p>
                         <p className= "BookDetailsPageLength"><b>Page Count:</b> {pageLength} pages</p>
+                        {/* These toggle buttons are used to switch the bool values for the owned, read, and wishlist statuses */}
                             <section className="bookToggleButtons">
                                 <button 
                                     id="ownButton" 
