@@ -8,7 +8,7 @@ function About() {
                 <br></br>
             </main>
             <section className="howToUseBlock">
-                <h1>How to use myShelf</h1>
+                <h2>How to use myShelf</h2>
                 <p>When you click on the Library link above, you'll see your library, represented digitally. To find books, click on the <b>"Browse Books"</b> tab. You'll see the full collection of books we currently support!
                     <br></br>
                     <br></br>

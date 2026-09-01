@@ -9,6 +9,10 @@ import FeedbackForm from './components/pages/FeedbackForm.jsx'
 import Library from './components/layout/Library.jsx'
 import Footer from './components/layout/Footer.jsx'
 
+// Learned that the booklist needed to be in state at this level, instead of on the individual page components. If it had been in state on each page, it would have been in its own state, and the pages would not have agreed with each other.
+
+// These three functions within App are the logic to toggle the bool values of their respective statuses, removing or adding them from the page. I also added logic to the owned and wishlist buttons so that if you click that you own a book, it will both move the book to your owned collection and remove it from your wishlist, and vice verses for adding a book to your wish list
+
 function App() {
   const [books, setBooks] = useState(BookList);
   function toggleOwned(id) {
